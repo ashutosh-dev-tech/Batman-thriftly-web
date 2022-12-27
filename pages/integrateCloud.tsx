@@ -36,7 +36,7 @@ function integrateCloud() {
         }
     }, [formationFormOpended]);
 
-    function populateArnInput(e){
+    function populateArnInput(e:any){
         const arnvVal = e.target.value;
         setArn(arnvVal);
         if( arnvVal ){
