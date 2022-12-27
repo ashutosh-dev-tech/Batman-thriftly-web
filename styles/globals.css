@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.purple-arounded-btn {
+    @apply text-[#602BF8] text-[14px] leading-[16px] rounded-[4px] border-[0.5px] border-solid border-[#E5E4E2] font-bold w-[164px] shadow-md shadow-[#602BF8] h-[3vw];
+}
