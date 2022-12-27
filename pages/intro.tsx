@@ -36,7 +36,7 @@ function intro() {
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] h-[20vw]'>
                 <img src='https://thriftly.s3.ap-south-1.amazonaws.com/gke-bg.png' className='w-[6vw]'></img>
                 <div className='px-[2vw] py-[1vw]'>
-                  <h2>Kubernates</h2>
+                  <h2>kubernetes</h2>
                   <h3 className='text-slate-400 mb-[2vw]'>GCP</h3>
                   <p className='text-slate-800'>Know your gcp kubernates cost with our advance tracking system</p>
                 </div>              
@@ -164,7 +164,7 @@ function intro() {
                 <div className='p-[1vw]'>
                 <div className='flex items-center py-[0.5vw] '><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Enterprise Security</h3></div>
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Policy Based Governance</h3></div>
-                  <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Intelligent Auto-Stopping (soon)Intelligent Auto-Stopping (soon)</h3></div>
+                  <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Intelligent Auto-Stopping (soon)</h3></div>
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>custom Dashboard</h3></div>
                 </div>
                 <button className='border-[0.1vw] w-[100%] p-[1vw] m-[1vw] border-solid border-[#9E77ED] text-[#9E77ED]'>Contact sales</button>
