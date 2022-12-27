@@ -1,6 +1,6 @@
 import Router from "next/router";
 import { baseUrl } from './constants';
-import cookieCutter from 'cookie-cutter';
+const cookieCutter = require('cookie-cutter');
 
 export const makeApiCall = async (url: string, apiObj:any) => {
     try{

@@ -2,7 +2,8 @@ import { Form } from 'antd';
 import React, { useState } from 'react';
 import { Input, Button } from "antd";
 import Link from 'next/link';
-import cookieCutter from 'cookie-cutter';
+//import cookieCutter from 'cookie-cutter';
+const cookieCutter = require('cookie-cutter');
 import { makeApiCall } from '../utils';
 import router from 'next/router';
 
