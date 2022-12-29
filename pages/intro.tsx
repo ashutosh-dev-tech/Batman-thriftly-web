@@ -71,7 +71,7 @@ function intro() {
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] h-[20vw]'>
                 <img src='https://thriftly.s3.ap-south-1.amazonaws.com/gke-bg.png' className='w-[6vw]'></img>
                 <div className='px-[2vw] py-[1vw]'>
-                  <h2>Recommendations</h2>
+                  <h2>Recommendation</h2>
                   <h3 className='text-slate-400 mb-[2vw]'>Soon</h3>
                   <p className='text-slate-800'>Get realtime recommensations to save cost on your cloud</p>
                 </div>              
@@ -88,7 +88,7 @@ function intro() {
           </div>
         </div>
         <div className="bg-[url('https://thriftly.s3.ap-south-1.amazonaws.com/goal.png')]	w-[100vw] h-[14vw] bg-no-repeat bg-contain text-center flex justify-center items-center">
-            <h2 className=' text-[2vw] mt-[2vw] bg-clip-text text-transparent bg-gradient-to-r from-[#FFFFFF] to-[#5F46FF]'>Our goal is to give everyone the visibility so they <br /> never pay more than whats needed.</h2>
+            <h2 className=' text-[2vw] mt-[2vw] bg-clip-text text-transparent bg-gradient-to-r from-[#FFFFFF] to-[#5F46FF]'>Our goal is to give everyone the visibility so that they <br /> never pay more than whats needed.</h2>
         </div>            
       </div>
 
@@ -107,7 +107,7 @@ function intro() {
                 <img src='https://thriftly.s3.ap-south-1.amazonaws.com/setting.png' className='w-[5vw] my-[1vw] !mx-[1.6vw]'></img>
                 <div className='px-[2vw] py-[1vw]'>
                   <h2 className='!text-[1.5vw] mb-[1vw]'>Analyze</h2>
-                  <p className='text-slate-800'>Analyze where you are spending much and which resources costing you more than needed</p>
+                  <p className='text-slate-800'>Analyze where you are spending much and which resources are costing you more than needed</p>
                 </div>              
               </div>
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] h-[20vw] bg-[#F7F6FB]'>
@@ -147,7 +147,7 @@ function intro() {
                 <h4 className='text-[#667085] py-[0.2vw]'>Everything in free plan plus</h4>
                 <div className='p-[1vw]'>
                   <div className='flex items-center py-[0.5vw] '><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Data Retention - 1 Years</h3></div>
-                  <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>SLA Guarantee</h3></div>
+                  <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>data protection</h3></div>
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Standard Support</h3></div>
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Manage unlimited cloud spend</h3></div>
                 </div>
@@ -227,7 +227,7 @@ function intro() {
             </Form.Item>
             <Form.Item label="Message" name="message" className='w-[100%]' rules={[{ required: true, message: 'message is required!' }]}>
               <Input
-                placeholder='Message'                                
+                placeholder='Message/Company Name'                                
               />
             </Form.Item>
             <Form.Item name="tc" valuePropName="checked" rules={[{ required: true, message: 'agree to our terms and conditions!' }]}>
