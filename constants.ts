@@ -1,1 +1,1 @@
-export const baseUrl = `http://ec2-13-233-112-52.ap-south-1.compute.amazonaws.com`;
+export const baseUrl = `https://api_test.thriftly.cloud`;
