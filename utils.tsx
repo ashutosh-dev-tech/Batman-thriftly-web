@@ -3,6 +3,7 @@ import { baseUrl } from './constants';
 const cookieCutter = require('cookie-cutter');
 
 export const makeApiCall = async (url: string, apiObj:any) => {
+    console.log("----------> In make API call");
     try{
         const res = await fetch(`${baseUrl}/${url}`, {
             ...apiObj,

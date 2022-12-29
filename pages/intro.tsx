@@ -5,7 +5,11 @@ import TextArea from 'antd/es/input/TextArea';
 import Link from 'next/link';
 
 function intro() {
-  const scollToRef = useRef();
+  const teamRef = useRef(null);
+  const featuresRef = useRef(null);
+  const pricingRef = useRef(null);
+  const processref =  useRef(null);
+
   const [form] = Form.useForm();
   const onFinish = (values: any) => {
     console.log('Success:', values);
@@ -15,22 +19,18 @@ function intro() {
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
-  };
-
-  const scrollTo = () => {
-
-  };
+  };  
 
   return (
     <>
-      <IntroHeader />
+      <IntroHeader featuresRef={featuresRef} teamRef={teamRef} pricingRef={pricingRef} processRef={processref}/>
       <div className='flex flex-col my-[3vw] justify-center items-center'>
         <h3 className='text-[#6E7DDB] text-[20px] leading-[16px] tracking-[-0.04em] m-[1vw]'>ARE YOU AWARE OF THE AMOUNT YOU ARE SPENDING ON THE CLOUD?</h3>
-        <h2 className='text-[69px] leading-[72px] tracking-[-0.04em] m-[1vw] font-bold'>Cloud billing simplified for <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#0038FF] to-[#AD00FF]'>everyone</span></h2>
+        <h2 className='text-[69px] leading-[72px] tracking-[-0.04em] m-[1vw] font-bold'>Cloud billing simplified for <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#0038FF] to-[#AD00FF] wrapper'>everyone</span></h2>
         <h5 className='m-[1vw]'>Utilize budgetary restrictions and savings opportunities to control cloud costs.</h5>
         
-        <div className='flex justify-center items-center flex-col'>
-          <h2 className='text-[40px] leading-[50px] m-[1vw]'>Features</h2>
+        <div className='flex justify-center items-center flex-col' ref={featuresRef}>
+          <h2 className='text-[40px] leading-[50px] m-[1vw]' id="features" >Features</h2>
           <div className='flex flex-col'>
             <div className='flex items-center justify-evenly'>
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] h-[20vw]'>
@@ -92,8 +92,8 @@ function intro() {
         </div>            
       </div>
 
-      <div className='flex justify-center items-center flex-col'>
-          <h2 className='text-[40px] leading-[50px] m-[1vw]'>How It Works?</h2>
+      <div className='flex justify-center items-center flex-col' ref={processref}>
+          <h2 className='text-[40px] leading-[50px] m-[1vw]' id="how-it-works">How It Works?</h2>
           <div className='flex flex-col'>
             <div className='flex items-center justify-evenly'>
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] h-[20vw] bg-[#F7F6FB]'>
@@ -121,7 +121,7 @@ function intro() {
           </div>
       </div>
 
-      <div className='flex justify-center items-center flex-col'>
+      <div className='flex justify-center items-center flex-col' ref={pricingRef}>
           <h2 className='text-[40px] leading-[50px] m-[1vw]'>Our Pricing</h2>
           <div className='flex flex-col'>
             <div className='flex items-center justify-evenly'>
@@ -173,7 +173,7 @@ function intro() {
           </div>
       </div>
 
-      <div className='flex items-center flex-col'>
+      <div className='flex items-center flex-col' id='team' ref={teamRef}>
           <h2 className='text-[40px] leading-[50px] m-[1vw]'>Our Team</h2>
           <div className='flex flex-col'>
             <div className='flex items-center justify-evenly'>
