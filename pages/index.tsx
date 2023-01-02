@@ -73,7 +73,7 @@ function intro() {
                 <div className='px-[2vw] py-[1vw]'>
                   <h2>Recommendation</h2>
                   <h3 className='text-slate-400 mb-[2vw]'>Soon</h3>
-                  <p className='text-slate-800'>Get realtime recommensations to save cost on your cloud</p>
+                  <p className='text-slate-800'>Get realtime recommendations to save cost on your cloud</p>
                 </div>              
               </div>
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] h-[20vw]'>
@@ -155,7 +155,7 @@ function intro() {
               </div>
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] flex flex-col justify-center items-center'>
                 <div className='p-[1vw]'>
-                  <h3 className='text-[2vw]'>Enterprise Contact us</h3>
+                  <h3 className='text-[2vw]'>Enterprise <span className='text-[0.8vw]'>contact us</span></h3>
                   <h4 className='text-[#667085] py-[1vw]'>for cloud billing more than $150k</h4>
                   <div className='border-[0.8px] border-solid'></div>
                 </div>

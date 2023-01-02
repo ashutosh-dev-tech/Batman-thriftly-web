@@ -38,7 +38,7 @@ function login() {
             });
         }
         else{
-            router.push("/");
+            router.push("/dashboard");
         }
         setLoading(false);        
     }
