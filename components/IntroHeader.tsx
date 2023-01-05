@@ -1,15 +1,15 @@
 
 import Link from 'next/link';
 import React from 'react';
-import { scrollTo } from '../utils';
 
 interface IntroHeaderProps {
   teamRef?: any;
   pricingRef?: any;
   featuresRef?: any;
   processRef?: any;
+  contactUsRef?: any;
 }
-function IntroHeader({teamRef, pricingRef, featuresRef, processRef}: IntroHeaderProps) {
+function IntroHeader({teamRef, pricingRef, featuresRef, processRef, contactUsRef}: IntroHeaderProps) {
   return (
       <header className='p-[0.5vw] flex border-b-[0.2vw] flex-1 justify-between items-center sticky top-0 z-50 bg-white'>
         <div>
@@ -19,8 +19,6 @@ function IntroHeader({teamRef, pricingRef, featuresRef, processRef}: IntroHeader
         </div>
         <div className='flex items-center font-normal'>
           <div className=' !text-[1.3vw] mx-[1vw] p-[1vw] cursor-pointer' onClick={()=>{ 
-              //debugger;
-              console.log({featuresRef});
               featuresRef.current?.scrollIntoView({behavior: 'smooth'});
             }}>
             <p>Features</p>
@@ -40,9 +38,12 @@ function IntroHeader({teamRef, pricingRef, featuresRef, processRef}: IntroHeader
           <Link href="/login" className='!text-[1.3vw] mx-[1vw] p-[1vw]'>
             <p>Sign In</p>
           </Link>
-          <Link href="/" className='!text-[1.3vw] mx-[1vw] p-[1vw]'>
+          <div className='!text-[1.3vw] mx-[1vw] p-[1vw] cursor-pointer' onClick={()=>{  
+              console.log({contactUsRef});
+              contactUsRef?.current?.scrollIntoView({behavior: 'smooth'});
+            }}>
             <p>Have Invite?</p>
-          </Link>
+          </div>
         </div>      
       </header>    
   );

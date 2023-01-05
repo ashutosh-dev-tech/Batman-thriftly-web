@@ -8,14 +8,34 @@ function intro() {
   const teamRef = useRef(null);
   const featuresRef = useRef(null);
   const pricingRef = useRef(null);
-  const processref =  useRef(null);
+  const processRef =  useRef(null);
+  const contactUsRef = React.useRef<HTMLInputElement>(null);
 
   const [form] = Form.useForm();
   const onFinish = (values: any) => {
     console.log('Success:', values);
     alert("will get back soon");
     form.resetFields();
+    const paperClipUrl =  `https://send.pageclip.co/ffbIzPpWUmf59rfUyQE3F7gnmhLuTOAQ/thriftly`;
+    sendDataToPaperClip(values, paperClipUrl);
   };
+
+  const sendDataToPaperClip = async (data:any, url:string) => {
+    try{
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    }
+    catch(e){
+      console.error(e);
+    }
+    
+  }
 
   const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
@@ -23,7 +43,7 @@ function intro() {
 
   return (
     <>
-      <IntroHeader featuresRef={featuresRef} teamRef={teamRef} pricingRef={pricingRef} processRef={processref}/>
+      <IntroHeader featuresRef={featuresRef} teamRef={teamRef} pricingRef={pricingRef} processRef={processRef} contactUsRef={contactUsRef}/>
       <div className='flex flex-col my-[3vw] justify-center items-center'>
         <h3 className='text-[#6E7DDB] text-[20px] leading-[16px] tracking-[-0.04em] m-[1vw]'>ARE YOU AWARE OF THE AMOUNT YOU ARE SPENDING ON THE CLOUD?</h3>
         <h2 className='text-[69px] leading-[72px] tracking-[-0.04em] m-[1vw] font-bold'>Cloud billing simplified for <span className='bg-clip-text text-transparent bg-gradient-to-r from-[#0038FF] to-[#AD00FF] wrapper'>everyone</span></h2>
@@ -92,7 +112,7 @@ function intro() {
         </div>            
       </div>
 
-      <div className='flex justify-center items-center flex-col' ref={processref}>
+      <div className='flex justify-center items-center flex-col' ref={processRef}>
           <h2 className='text-[40px] leading-[50px] m-[1vw]' id="how-it-works">How It Works?</h2>
           <div className='flex flex-col'>
             <div className='flex items-center justify-evenly'>
@@ -136,7 +156,7 @@ function intro() {
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Cost Budgets & Anomalies</h3></div>
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Cost Recommendations</h3></div>
                 </div>
-                <button className='border-[0.1vw] w-[100%] p-[1vw] m-[1vw] border-solid border-[#9E77ED] text-[#9E77ED]'>Try for free</button>
+                <button className='border-[0.1vw] w-[100%] p-[1vw] m-[1vw] border-solid border-[#9E77ED] text-[#9E77ED]' onClick={()=>{  contactUsRef?.current?.scrollIntoView({behavior: 'smooth'});}}>Try for free</button>
               </div>              
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#BFAFFF] p-[1vw] m-[1vw] max-w-xs py-[1vw] flex flex-col justify-center items-center'>
                 <div className='p-[1vw]'>
@@ -151,7 +171,9 @@ function intro() {
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Standard Support</h3></div>
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Manage unlimited cloud spend</h3></div>
                 </div>
-                <button className='border-[0.1vw] w-[100%] p-[1vw] m-[1vw] border-solid bg-[#9E77ED] text-[white]'>Subscribe now</button>
+                <button className='border-[0.1vw] w-[100%] p-[1vw] m-[1vw] border-solid bg-[#9E77ED] text-[white]' onClick={()=>{  
+                  contactUsRef?.current?.scrollIntoView({behavior: 'smooth'});
+                  }}>Subscribe now</button>
               </div>
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] flex flex-col justify-center items-center'>
                 <div className='p-[1vw]'>
@@ -167,7 +189,7 @@ function intro() {
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>Intelligent Auto-Stopping (soon)</h3></div>
                   <div className='flex items-center py-[0.5vw]'><img src='https://thriftly.s3.ap-south-1.amazonaws.com/tick.png'></img><h3 className='text-[#1A1A1A] pl-[1vw]'>custom Dashboard</h3></div>
                 </div>
-                <button className='border-[0.1vw] w-[100%] p-[1vw] m-[1vw] border-solid border-[#9E77ED] text-[#9E77ED]'>Contact sales</button>
+                <button className='border-[0.1vw] w-[100%] p-[1vw] m-[1vw] border-solid border-[#9E77ED] text-[#9E77ED]' onClick={()=>{  contactUsRef?.current?.scrollIntoView({behavior: 'smooth'});}}>Contact sales</button>
               </div>
             </div>
           </div>
@@ -201,7 +223,7 @@ function intro() {
       <div className='border-[0.15vw] border-solid m-[4vw]'>
       </div>
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between' ref={contactUsRef}>
         <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg px-[4vw] flex flex-col justify-center items-center mx-[3vw] mb-[2vw]'>
           <h2 className='text-[40px] leading-[50px] m-[1vw]'>Get in touch!</h2>
           <Form
