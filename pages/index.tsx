@@ -212,9 +212,9 @@ function intro() {
               
               </div>
               <div className='rounded-2xl border-[0.5px] border-solid border-[#E5E4E2] shadow-lg shadow-[#5566991c] p-[1vw] m-[1vw] max-w-xs py-[1vw] flex flex-col !min-h-[22vw]'>
-                <img src='https://thriftly.s3.ap-south-1.amazonaws.com/karan.jpeg' className='m-[1vw] rounded-2xl'></img>
-                <h3 className='px-[1vw]'>Karan</h3>
-                <p className='px-[1vw]'>COO - never out of words</p>              
+                <img src='https://thriftly.s3.ap-south-1.amazonaws.com/ashu.jpeg' className='m-[1vw] rounded-2xl'></img>
+                <h3 className='px-[1vw]'>Ashutosh</h3>
+                <p className='px-[1vw]'>CTO - getting things done</p>
               </div>
             </div>
           </div>
