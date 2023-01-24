@@ -19,7 +19,7 @@ function Header() {
       </div>
 
       <div className='flex items-center'>
-        <Link href="/" className=' !text-[1.3vw] mx-[1vw] p-[1vw]'>
+        <Link href="/dashboard" className=' !text-[1.3vw] mx-[1vw] p-[1vw]'>
           <p>home</p>
         </Link>
         <Link href="/gcp" className=' text-[1.3vw] mx-[1vw] p-[1vw]'>
@@ -28,7 +28,7 @@ function Header() {
         <Link href="/account" className=' text-[1.3vw] mx-[1vw] p-[1vw]'>
           my account
         </Link>
-        <Link href="/" className='my-[1vw] mx-[2vw]'>
+        <Link href="/dashboard" className='my-[1vw] mx-[2vw]'>
         < Popover content={popoverContent}>
           <img src='https://thriftly.s3.ap-south-1.amazonaws.com/menu-icon.svg' className='w-[2vw]' />
         </Popover>          
