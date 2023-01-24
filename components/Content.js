@@ -46,16 +46,16 @@ function Content() {
         
         <div className='flex items-center my-[1vw]'>
             <StatsBox
-                heading='Cost Yesterday '
-                data='₹500,000'
+                heading='Cost Today '
+                data='9,144,484'
             />
             <StatsBox
-                heading='Cost This Month'
-                data='₹1,000,00'
+                heading='Cost last week'
+                data='₹74,763,227'
             />
             <StatsBox
-                heading='Cost last Month'
-                data='₹1,000,00'
+                heading='Cost this Month'
+                data='₹278,017,383'
             />
         </div>
         <div className='h-[55vw] relative'>
